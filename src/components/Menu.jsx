@@ -11,17 +11,21 @@ const Menu = () => {
         </h2>
 
         <nav className="cocktail-tabs" aria-label="Cocktail Navigation">
-            {allCocktails.map((cocktail,index) => {
-                const isActive = index == currentIndex;
-
-                return(
-                    <button key={cocktail.id} className={`$isActive? 'text-white border-white':'text-white/50 border-white/50'`}>
-                        {cocktail.name}
-                    </button>
-                )
-
-            })}
-        </nav>
+		{allCocktails.map((cocktail, index) => {
+		 const isActive = index === currentIndex;
+		 
+		 return (
+			<button key={cocktail.id} className={`
+				${isActive
+				 ? 'text-white border-white'
+				 : 'text-white/50 border-white/50'}
+			 `}	onClick={() => goToSlide(index)}
+			>
+			 {cocktail.name}
+			</button>
+		 )
+		})}
+	 </nav>
     </section>
   )
 }
