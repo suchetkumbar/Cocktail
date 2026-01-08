@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local documentation (not committed)
+GSAP-notes.md
+next-steps.md
